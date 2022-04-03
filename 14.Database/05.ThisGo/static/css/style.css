@@ -1,0 +1,15 @@
+.release-col > div {
+  display: none;
+}
+
+.release-col:hover > div {
+  display: inline-block;
+}
+
+canvas {
+  height: 300px;
+}
+
+#heading-title {
+  text-shadow: 3px 3px 3px #00000077;
+}

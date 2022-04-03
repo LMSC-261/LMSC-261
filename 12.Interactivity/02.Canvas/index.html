@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<!-- Demonstrates Canvas -->
+
+<html lang="en">
+    <head>
+        <title>canvas</title>
+    </head>
+    <body>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            // Rectangle
+            ctx.fillStyle = 'red';
+            ctx.fillRect(25, 25, 50, 50);
+            // Circle
+            ctx.fillStyle = 'green';
+            ctx.beginPath();
+            ctx.arc(150, 50, 25, 0, 2 * Math.PI);
+            ctx.fill();
+        </script>
+    </body>
+</html>

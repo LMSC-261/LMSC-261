@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+<script>
+    // Make the link for the current page active
+    let link = document.querySelector("#contact_link");
+    link.classList.add("active");
+</script>
+<div class="container">
+  <p class="mb-3">Submitting demos? We accept links only (no physical copies or mp3, please).</p>
+  <form>
+      <div class="row mb-3">
+          <div class="col">
+              <input type="text" class="form-control" placeholder="Name" aria-label="Name" required>
+          </div>
+          <div class="col">
+              <input type="text" class="form-control" placeholder="Email" aria-label="Email" required>
+          </div>
+      </div>
+      <div class="mb-3">
+          <textarea class="form-control" aria-label="With textarea" placeholder="Type your message here..." required></textarea>
+      </div>
+      <div class="text-end">
+          <button type="submit" class="btn btn-primary mb-3">Submit</button>
+      </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>Music Shop</h1>
+<form action="/update" method="post">
+    <input min="0" name="piano" type="number" value="0"/> Piano
+    <br/>
+    <input min="0" name="guitar" type="number" value="0"/> Guitar
+    <br/>
+    <input min="0" name="bass" type="number" value="0"/> Bass
+    <br/>
+    <input min="0" name="drum" type="number" value="0"/> Drum
+    <br/>
+    <input type="submit" value="Add to Cart"/>
+</form>
+<p>
+    View your <a href="/cart">shopping cart</a>.
+</p>
+{% endblock %}

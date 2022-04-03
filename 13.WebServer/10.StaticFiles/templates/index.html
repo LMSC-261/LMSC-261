@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body %}
+	<script>
+		let link = document.querySelector("#release_link");
+		link.classList.add("active");
+	</script>
+	<!-- p5.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.js"></script>
+	<script src="static/js/sketch.js"></script>
+
+	<!-- Heading -->
+	<div class="container p-md-3 mb-4">
+		<div class="card px-0 bg-dark" id="heading">
+			<div class="card-img-overlay text-white mx-3 my-1 p-1" id="heading-overlay">
+				<h1 id="heading-title" class="display-4 fst-bold text-white position-absolute bottom-0">ThisGo Records</h1>
+			</div>
+		</div>
+	</div>
+
+	<!-- Release Grid -->
+	<div class="container">
+		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mb-4">
+			{% for r in release %}
+			<div class="card release-col col border-0" aria-label="{{ r[1] }}">
+				<img src="static/imgs/{{ r[2] }}" class="img-thumbnail" alt="{{ r[1] }}"/>
+				<div class="card-img-overlay text-white bg-dark opacity-75 mx-3 my-1" id="release-overlay">
+				<h3 class="position-absolute bottom-0 mb-5">{{ r[0] }}</h3>
+				<h5 class="position-absolute bottom-0 mb-4">{{ r[1] }}</h5>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
+

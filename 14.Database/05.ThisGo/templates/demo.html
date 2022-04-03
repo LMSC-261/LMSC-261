@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="container mb-4">
+        <h1>Demo List</h1>
+        <div class="list-group"></div>
+            {% for demo in demos %}
+                <div class="list-group-item">
+                    <h5 class="mb-1">{{ demo['name'] }}</h5>
+                    <p class="mb-1">{{ demo['email'] }}</p>
+                    <small>{{ demo['text'] }}</small>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
